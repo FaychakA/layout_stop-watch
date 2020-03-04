@@ -1,0 +1,57 @@
+body {
+  margin: 0 auto; }
+
+.stop-watch {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%); }
+  .stop-watch::after {
+    content: "";
+    position: absolute;
+    bottom: 287.5px;
+    right: 287.5px;
+    width: 25px;
+    height: 25px;
+    background-color: #5f98a8;
+    border-radius: 50%;
+    z-index: 2; }
+  .stop-watch__minutes {
+    position: absolute;
+    bottom: 300px;
+    right: 295px;
+    width: 10px;
+    height: 150px;
+    background-color: #c25d5d;
+    border-radius: 5px;
+    -webkit-animation: second 3600s linear both infinite;
+            animation: second 3600s linear both infinite;
+    transform-origin: bottom; }
+  .stop-watch__seconds {
+    position: absolute;
+    bottom: 300px;
+    right: 295px;
+    width: 10px;
+    height: 250px;
+    background-color: #5f98a8;
+    border-radius: 5px;
+    z-index: 1;
+    -webkit-animation: second 60s linear both infinite;
+            animation: second 60s linear both infinite;
+    transform-origin: bottom; }
+
+@-webkit-keyframes second {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(360deg); } }
+
+@keyframes second {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=main.css.map */
